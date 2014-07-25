@@ -11,9 +11,9 @@ License: Apache 2.0
 Available checks:
 
  - type: monitor::process
-   values:
+   values: 
      {process_name}:
-        process: {process or process string}
+       process: {process or process string}
 
 
  - type: monitor::port
