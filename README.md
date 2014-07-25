@@ -6,7 +6,6 @@ Author: Kanwar Gill
 
 License: Apache 2.0
 
-Original Repo: http://github.com/kultar/monitor
 
 
 Available checks:
