@@ -1,0 +1,13 @@
+## nrpe.conf.erb
+
+log_facility=daemon
+pid_file=/var/run/nrpe.pid
+server_port=<%= scope.lookupvar('monitor::params::nrpe_server_port') %>
+nrpe_user=<%= scope.lookupvar('monitor::params::nagios_user') %>
+nrpe_group=<%= scope.lookupvar('monitor::params::nagios_group') %>
+#allowed_hosts=127.0.0.1
+dont_blame_nrpe=<%= scope.lookupvar('monitor::params::nrpe_blame') %>
+debug=<%= scope.lookupvar('monitor::params::nrpe_debug') %>
+command_timeout=60
+connection_timeout=300
+include_dir=/etc/nagios/nrpe.d/

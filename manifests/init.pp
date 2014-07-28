@@ -6,6 +6,7 @@ class monitor{
 	## basic checks
 	include monitor::base_checks
 	
-
+	## enable the agent
+	include monitor::package
 
 }

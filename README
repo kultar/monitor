@@ -1,0 +1,49 @@
+======
+Monitor
+
+
+
+
+Author: Kanwar Gill
+License: Apache 2.0
+Original Repo: http://github.com/kultar/monitor
+
+
+Purpose
+	 Provide a simple method of utilizing nagios and the plethora of tools out there to monitor the status of hosts.
+	 	-- Use SNMP for common checks
+	 	-- Use NRPE/NSCLIENT for custom
+
+Requirements
+	Storedconfigs need to be enabled, i'd suggest PuppetDB
+
+
+
+Current list of action items
+1. SNMP
+	- agent
+	- community string
+2. Checks
+	- migrate existing "base checks" to SNMP
+
+
+
+
+
+
+Available checks:
+
+ - type: monitor::process
+   values:
+     {process_name}:
+        process: {process or process string}
+
+
+ - type: monitor::port
+   values:
+     {port_name}:
+        port: {port number}
+        protocol: {tcp or udp}
+        target: {local or remote, default to remote if not provided}
+
+
