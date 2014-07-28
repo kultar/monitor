@@ -5,7 +5,7 @@ define monitor::port (
   $checksource  = '',
   $template     = '',
   $enable=true
-  )
+  ){
 
   $real_checksource = $checksource ? {
     ''      => $target ? {
