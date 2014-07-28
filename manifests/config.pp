@@ -1,5 +1,10 @@
 class monitor::config($agent){
 	
+	$file_path = $agent ? {
+		nrpe 	=> "/etc/nagios/nrpe.cfg",
+		snmp	=> "/etc/snmp/snmpd.conf",
+	}
+
 
 	file { "${file_path}":
 		owner	=> root,
