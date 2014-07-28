@@ -1,7 +1,7 @@
 define monitor::process (
 	$process,
-	$argument     = '',
-	$enable       = true,){
+	$argument	= '',
+	$enable		= true,){
 	
 
 	$default_check_command = $argument ? {

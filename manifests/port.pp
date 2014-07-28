@@ -8,7 +8,7 @@ define monitor::port (
   ){
 
   $real_checksource = $checksource ? {
-    ''      => $target ? {
+      ''      => $target ? {
       'localhost' => 'local',
       '127.0.0.1' => 'local',
       default     => 'remote',

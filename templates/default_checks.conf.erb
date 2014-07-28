@@ -1,0 +1,10 @@
+command[check_port_tcp]=<%= scope.lookupvar('monitor::params::nagios_plugins_dir') %>/check_tcp -H $ARG1$ -p $ARG2$ 
+command[check_port_udp]=<%= scope.lookupvar('monitor::params::nagios_plugins_dir') %>/check_udp -H $ARG1$ -p $ARG2$ 
+command[check_process]=<%= scope.lookupvar('monitor::params::nagios_plugins_dir') %>/check_procs -C $ARG1$
+command[check_processwitharg]=<%= scope.lookupvar('monitor::params::nagios_plugins_dir') %>/check_procs -C $ARG1$ $ARG2$
+command[check_http]=<%= scope.lookupvar('monitor::params::nagios_plugins_dir') %>/check_http -I $HOSTADDRESS$ $ARG1$
+command[check_https]=<%= scope.lookupvar('monitor::params::nagios_plugins_dir') %>/check_http -S -I $HOSTADDRESS$ $ARG1$
+
+
+
+

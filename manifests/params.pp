@@ -24,6 +24,13 @@ class monitor::params{
 	## debug
 	$nrpe_debug = "0"
 
+	## nagios_plugins dir
+	$nagios_plugins_dir= $::operatingsystem ? {
+		amazon		=> '/usr/lib64/nagios/plugins/',
+		centos		=> '/usr/lib64/nagios/plugins/',
+		default		=> '/usr/lib/nagios/plugins/',
+	}
+
 
 
 }
